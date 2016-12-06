@@ -3,7 +3,11 @@ var Nav = React.createClass({
         return (
             <nav className="navbar navbar-default">
                 <div className="container">
-
+                    <div className="navbar-header">
+                        <a href="#" className="navbar-brand">
+                            React
+                        </a>
+                    </div>
                 </div>
             </nav>
         );
@@ -11,6 +15,6 @@ var Nav = React.createClass({
 });
 
 ReactDOM.render(
-    <h1> Hello React </h1>,
+    <Nav/>,
     document.getElementById('app')
 );
