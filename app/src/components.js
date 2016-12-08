@@ -15,10 +15,15 @@ var Nav = React.createClass({
 });
 
 var Title = React.createClass({
+
     render: function () {
+        var TitleStyle = {
+            color: "#777676",
+            fontSize: "35px"
+        };
         return (
             <div className="row">
-                <h1>{ this.props.title }</h1>
+                <h1 style={TitleStyle}>{ this.props.title }</h1>
             </div>
         );
     }
@@ -50,19 +55,24 @@ var Button = React.createClass({
 
 var Form = React.createClass({
     render: function () {
+        var InputStyle = {
+            padding: "20px",
+            fontSize: "16px",
+            color: "#A7A5A5"
+        };
         return (
             <form >
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
-                    <input type="text" className="form-control" id="name" placeholder="Name"/>
+                    <input type="text" className="form-control" id="name" placeholder="Name" style={InputStyle}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">E-mail</label>
-                    <input type="email" className="form-control" id="email" placeholder="E-mail"/>
+                    <input type="email" className="form-control" id="email" placeholder="E-mail" style={InputStyle}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="messenger">Message</label>
-                    <textarea className="form-control" id="messenger" rows="3"> </textarea>
+                    <textarea className="form-control" id="messenger" rows="3" style={InputStyle}> </textarea>
                 </div>
             </form>
         );
